@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './Navbar.css';
-import cartImage from './cart.svg';
-import logo from './logo.png';
+import cartImage from '../img/cart.svg';
+import logo from '../img/logo.png';
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);

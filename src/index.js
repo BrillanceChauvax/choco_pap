@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Footer from './Footer.js';
+import Footer from './composants/footer/Footer.js';
 import reportWebVitals from './reportWebVitals';
-import Navbar from './Navbar.js';
-import Carousel from './Caroussel.js';
+import Navbar from './composants/header/Navbar.js';
+import Carousel from './composants/caroussel/Caroussel.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
