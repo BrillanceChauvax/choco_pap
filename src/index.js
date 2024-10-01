@@ -1,17 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.css';
 import Footer from './composants/footer/Footer.js';
 import reportWebVitals from './reportWebVitals';
 import Navbar from './composants/header/Navbar.js';
 import Carousel from './composants/caroussel/Caroussel.js';
+import Boutique from './composants/boutique/Boutique.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Navbar />
-    <Carousel />
-    <Footer />
+    <Router>
+      <Navbar />
+    <Routes>
+      <Route path="/" element={<Carousel />} />
+      <Route path="/boutique" element={<Boutique />} />
+    </Routes>
+      <Footer />
+    </Router>
   </React.StrictMode>
 );
 

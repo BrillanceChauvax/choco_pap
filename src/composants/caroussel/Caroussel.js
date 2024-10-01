@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Caroussel.css';
 
-
 const Carousel = () => {
     // State pour l'index de l'image actuelle
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,7 +15,7 @@ const Carousel = () => {
     // Gestion du changement automatique d'image'
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndex((currentIndex + 1) % slides.length); // Passe à l'image suivante toutes les 3 secondes
+            setCurrentIndex((currentIndex + 1) % slides.length); // Passe à l'image suivante toutes les 5 secondes
         }, 5000);
         return () => clearInterval(interval); // Nettoyage lors du démontage
     }, [currentIndex, slides.length]);
@@ -37,7 +36,7 @@ const Carousel = () => {
             </div>
             <div className="carousel-content">
                 <h1>CHOCO PAP</h1>
-                <a href="#boutique" className="carousel-btn">VOIR LA BOUTIQUE</a>
+                <a href="/Boutique" className="carousel-btn">VOIR LA BOUTIQUE</a>
             </div>
             <div className="carousel-indicators">
                 {slides.map((_, index) => (

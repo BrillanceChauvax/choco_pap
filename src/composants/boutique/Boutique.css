@@ -1,0 +1,77 @@
+.boutique-container {
+    display: flex;
+  }
+  
+  .filter-sidebar {
+    max-width: 300px;       /* Largeur maximale */
+    width: 100%;            /* Prend 100% de l'espace disponible */
+    padding: 20px;           
+    margin-right: 20px;  
+    background-color: #ffd543;
+  }
+
+  .filter-sidebar h3 {
+    margin-bottom: 50px;
+  }
+  
+  .filter-section {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .filter-section {
+    margin-bottom: 20px;
+  }
+  
+  .filter-section label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Espacement entre les cartes */
+  }
+  
+  .product-card {
+    width: calc(33.333% - 20px);
+    max-width: 100%; /* Assure que ça ne dépasse pas le conteneur */
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre pour un léger effet 3D */
+    border-radius: 5px; /* Coins arrondis */
+    background-color: #fff; /* Fond blanc */
+  }
+  
+  .product-image {
+    width: 100%;  /* Image prend toute la largeur de la carte */
+    height: 150px; /* Hauteur fixe pour uniformité */
+    object-fit: contain; /* S'assure que l'image s'adapte bien sans déformation */
+    display: block; /* Évite l'espace blanc sous l'image */
+    margin: 0 auto; /* Centre l'image */
+  }
+  
+  .add-to-cart {
+    margin-top: 10px; /* Espace au-dessus du bouton */
+    padding: 8px 16px; /* Espacement du bouton */
+    background-color: #4CAF50; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Curseur en main au survol */
+  }
+  
+  .add-to-cart:hover {
+    background-color: #45a049; /* Couleur du bouton au survol */
+  }
+  

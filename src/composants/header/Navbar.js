@@ -39,9 +39,9 @@ const Navbar = () => {
 
         {!isMobile && (
           <ul className="navbar-links">
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Boutique</a></li>
-            <li><a href="#">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/Boutique">Boutique</a></li>
+            <li><a href="/Panier">
               <img src={cartImage} alt="Panier" className="cart-image" />
             </a></li>
           </ul>
@@ -59,9 +59,9 @@ const Navbar = () => {
       {isMobile && (
         <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
           <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Boutique</a></li>
-            <li><a href="#" className="cart-icon">Panier
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/Boutique">Boutique</a></li>
+            <li><a href="/Panier" className="cart-icon">Panier
               <img src={cartImage} alt="Panier" className="cart-image" />
               
             </a></li>
