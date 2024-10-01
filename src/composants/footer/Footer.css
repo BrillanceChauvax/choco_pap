@@ -69,7 +69,7 @@ footer {
 
 @media (min-width: 769px) {
     .footer-section.choco-pap {
-        flex: 0 0 350px; /* Définit une largeur fixe de 200px */
-        max-width: 350px; /* Limite la largeur maximale à 250px */
+        flex: 0 0 350px; /* Définit une largeur fixe */
+        max-width: 350px; /* Limite la largeur maximale */
     }
 }

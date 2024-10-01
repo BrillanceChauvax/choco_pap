@@ -1,13 +1,32 @@
 .boutique-container {
     display: flex;
+    align-items: flex-start;
   }
   
+  .shop-name {
+    font-size: 80px;
+    text-align: center;
+    margin-top: 80px;
+  }
+
   .filter-sidebar {
-    max-width: 300px;       /* Largeur maximale */
-    width: 100%;            /* Prend 100% de l'espace disponible */
-    padding: 20px;           
-    margin-right: 20px;  
+    display: block;
+    position: sticky;
+    top: 20px;
+    width: 100%;
+    max-width: 400px;         
+    padding: 50px;           
+    margin-right: 20px; 
     background-color: #ffd543;
+    border: solid 1px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  .filter-sidebar h3, h4 {
+    margin-bottom: 20px;
+    font-family: Fjalla One;
+    text-decoration: underline;
+    font-size: 25px;
   }
 
   .filter-sidebar h3 {
@@ -15,63 +34,97 @@
   }
   
   .filter-section {
-    margin-bottom: 20px;
-  }
-  
-  button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .filter-section {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   
   .filter-section label {
-    display: block;
-    margin-bottom: 10px;
+    display: flex;
+    margin-bottom: 8px;
+    align-items: center;
+  }
+
+  .filter-section input[type="checkbox"] {
+    margin-right: 10px;          
+  }
+  
+  .filter-section select {
+    margin-left: 10px;         
+    padding: 5px;                
   }
   
   .products-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Espacement entre les cartes */
+    justify-content: space-between; 
+    padding: 50px;
   }
   
   .product-card {
-    width: calc(33.333% - 20px);
-    max-width: 100%; /* Assure que ça ne dépasse pas le conteneur */
+    width: 350px;
     margin: 10px;
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre pour un léger effet 3D */
-    border-radius: 5px; /* Coins arrondis */
-    background-color: #fff; /* Fond blanc */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    border-radius: 5px; 
+    background-color: #fff; 
   }
   
   .product-image {
     width: 100%;  /* Image prend toute la largeur de la carte */
-    height: 150px; /* Hauteur fixe pour uniformité */
+    height: 200px; /* Hauteur fixe pour uniformité */
     object-fit: contain; /* S'assure que l'image s'adapte bien sans déformation */
-    display: block; /* Évite l'espace blanc sous l'image */
-    margin: 0 auto; /* Centre l'image */
+  }
+
+  .product-price {
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+
+  .product-note {
+    font-size: 20px;
+  }
+
+  .no-product {
+    font-size: 30px;
   }
   
   .add-to-cart {
-    margin-top: 10px; /* Espace au-dessus du bouton */
+    margin-top: 15px; /* Espace au-dessus du bouton */
+    margin-bottom: 10px;
     padding: 8px 16px; /* Espacement du bouton */
-    background-color: #4CAF50; /* Couleur de fond du bouton */
+    background-color: #55c0cf; /* Couleur de fond du bouton */
     color: white; /* Couleur du texte */
-    border: none; /* Pas de bordure */
     border-radius: 4px; /* Coins arrondis */
     cursor: pointer; /* Curseur en main au survol */
+    font-size: 30px;
   }
   
   .add-to-cart:hover {
-    background-color: #45a049; /* Couleur du bouton au survol */
+    background-color: #2c1e1e; /* Couleur du bouton au survol */
   }
+
+  @media (max-width: 1300px) {
+  .boutique-container {
+    display: flex;
+    flex-direction: column; /* Alignez les éléments verticalement */
+}
+
+.filter-sidebar {
+    position: relative;
+    top: 0;
+    max-width: 100%;
+    background-color: #ffd543; /* Couleur de fond */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Ombre sous le filtre */
+}
+
+.products-grid {
+    display: flex;
+    flex-direction: column; /* Alignez les éléments verticalement */
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+  }
+
   

@@ -10,7 +10,7 @@
       "lait": true,
       "noir": false,
       "caramel": false,
-      "noix": true,
+      "noix/Noisettes": true,
       "fruit": true,
       "liqueur": false
     },
@@ -28,7 +28,7 @@
       "lait": true,
       "noir": false,
       "caramel": true,
-      "noix": false,
+      "noix/Noisettes": false,
       "fruit": false,
       "liqueur": false
     },
@@ -46,7 +46,7 @@
       "lait": true,
       "noir": false,
       "caramel": false,
-      "noix": false,
+      "noix/Noisettes": false,
       "fruit": false,
       "liqueur": true
     },
@@ -64,7 +64,7 @@
       "lait": false,
       "noir": false,
       "caramel": false,
-      "noix": false,
+      "noix/Noisettes": false,
       "fruit": false,
       "liqueur": false
     },
@@ -82,7 +82,7 @@
       "lait": true,
       "noir": false,
       "caramel": false,
-      "noix": true,
+      "noix/Noisettes": true,
       "fruit": false,
       "liqueur": false
     },
@@ -100,7 +100,7 @@
       "lait": true,
       "noir": false,
       "caramel": false,
-      "noix": false,
+      "noix/Noisettes": false,
       "fruit": false,
       "liqueur": false
     },
@@ -118,7 +118,7 @@
       "lait": true,
       "noir": true,
       "caramel": false,
-      "noix": false,
+      "noix/Noisettes": false,
       "fruit": true,
       "liqueur": true
     },
@@ -136,7 +136,7 @@
       "lait": false,
       "noir": true,
       "caramel": false,
-      "noix": false,
+      "noix/Noisettes": false,
       "fruit": false,
       "liqueur": false
     },
@@ -154,7 +154,7 @@
       "lait": true,
       "noir": false,
       "caramel": true,
-      "noix": true,
+      "noix/Noisettes": true,
       "fruit": false,
       "liqueur": false
     },
@@ -172,7 +172,7 @@
       "lait": false,
       "noir": false,
       "caramel": true,
-      "noix": false,
+      "noix/Noisettes": false,
       "fruit": false,
       "liqueur": false
     },
