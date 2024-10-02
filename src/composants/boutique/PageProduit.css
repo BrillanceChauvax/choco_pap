@@ -82,3 +82,63 @@
   .add-to-cart-button:hover {
     background-color: #2c1e1e;
   }
+
+  @media (max-width: 860px) {
+    .product-page {
+        flex-direction: column; /* Passe en colonne */
+        padding: 50px 20px; /* Ajustement des marges */
+    }
+    
+    .product-left {
+        order: 2; /* Place l'image sous .product-right */
+        justify-content: center;
+    }
+    
+    .product-image-page {
+        max-width: 100%; /* L'image prend toute la largeur */
+        height: auto; /* Conserve les proportions */
+    }
+    
+    .product-right {
+        order: 1; /* Place le contenu avant l'image */
+        font-size: 24px; /* Réduction de la taille de police pour mobile */
+        align-items: flex-start; /* Alignement à gauche */
+        width: 100%; /* Prendre toute la largeur disponible */
+    }
+
+    .product-right h2,
+    .product-price,
+    .list-ingredient,
+    .quantity-section {
+        text-align: left; /* Alignement des textes à gauche */
+        width: 100%; /* Prendre toute la largeur disponible */
+    }
+
+    .product-description {
+        text-align: left; /* Alignement des textes à gauche */
+        width: 100%; /* Prendre toute la largeur disponible */
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+
+    .quantity-section {
+        display: flex;
+        flex-direction: column; /* Aligner les éléments verticalement */
+        align-items: flex-start; /* Alignement à gauche */
+    }
+
+    .quantity-section select {
+        margin-bottom: 30px; /* Espacement entre la sélection et le bouton */
+        font-size: 0.9em; /* Ajustement de la taille de police */
+    }
+
+    .add-to-cart-button {
+        margin-top: 0; /* Supprimer l'espace au-dessus du bouton */
+        width: 100%; /* Ajustement de la taille du bouton */
+    }
+
+    .list-ingredient {
+        padding-left: 20px; /* Alignement à gauche */
+        padding-bottom: 50px;
+    }
+}
