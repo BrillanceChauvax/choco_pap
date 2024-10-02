@@ -26,7 +26,7 @@ const CartPopup = ({ isOpen, onClose }) => {
                 <span className="item-title">{item.title}</span>
                 <span className="item-price">{item.price} €</span>
                 <select className="quantity-select" value={item.quantity} onChange={(e) => onUpdateQuantity(item.id, e.target.value)}>
-                  {[...Array(100).keys()].map(num => (
+                  {[...Array(99).keys()].map(num => (
                     <option key={num} value={num + 1}>{num + 1}</option>
                   ))}
                 </select>

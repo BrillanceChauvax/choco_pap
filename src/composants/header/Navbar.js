@@ -1,27 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import './Navbar.css';
 import cartImage from '../img/cart.svg';
 import logo from '../img/logo.png';
+import { CartContext } from '../boutique/CartContext.js';
 import { Link } from 'react-router-dom';
 
 const Navbar = ({ onCartClick }) => {
+  const { cartItems } = useContext(CartContext);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Gérer le redimensionnement de la fenêtre
   const handleResize = () => {
+    setIsMobile(window.innerWidth <= 768);
     if (window.innerWidth > 768) {
-      setIsMobile(false);
-      setMenuOpen(false); // Fermer le menu si on passe en mode desktop
-    } else {
-      setIsMobile(true);
+      setMenuOpen(false);
     }
   };
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-    handleResize(); // Appeler la fonction au chargement
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -30,6 +27,8 @@ const Navbar = ({ onCartClick }) => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
     <header>
@@ -42,9 +41,12 @@ const Navbar = ({ onCartClick }) => {
           <ul className="navbar-links">
             <li><Link to="/">Accueil</Link></li>
             <li><Link to="/boutique">Boutique</Link></li>
-            <li><button onClick={onCartClick} className="cart-icon">
-              <img src={cartImage} alt="Panier" className="cart-image" />
-            </button></li>
+            <li>
+              <button onClick={onCartClick} className="cart-icon">
+                {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
+                <img src={cartImage} alt="Panier" className="cart-image" />
+              </button>
+            </li>
           </ul>
         )}
 
@@ -57,14 +59,15 @@ const Navbar = ({ onCartClick }) => {
         )}
       </nav>
 
-      {isMobile && (
-        <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
+      {isMobile && menuOpen && (
+        <div className="mobile-menu active">
           <ul>
-            <li><a href="/">Accueil</a></li>
-            <li><a href="/boutique">Boutique</a></li>
+            <li><Link to="/">Accueil</Link></li>
+            <li><Link to="/boutique">Boutique</Link></li>
             <li>
               <button onClick={onCartClick} className="cart-icon">
-                Panier
+                <p className="mobile-panier">Panier</p>
+                {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
                 <img src={cartImage} alt="Panier" className="cart-image" />
               </button>
             </li>

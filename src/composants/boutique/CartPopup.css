@@ -4,7 +4,7 @@
     top: 135px;
     right: -600px; /* Cache le pop-up par défaut */
     width: 500px;
-    height: calc(100% - 235px); /* S'arrête avant la navbar et le footer */
+    height: calc(100% - 140px); /* S'arrête avant la navbar et le footer */
     background-color: white;
     border: solid 2px;
     transition: right 0.5s ease;
@@ -116,3 +116,8 @@
     }
   }
   
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .cart-popup {
+        max-width: 400px; /* Limite la largeur maximum */
+    }
+}

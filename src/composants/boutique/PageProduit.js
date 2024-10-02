@@ -38,7 +38,7 @@ const ProductPage = () => {
 
           <div className="quantity-section">
             <select id="quantity" value={quantity} onChange={handleQuantityChange}>
-              {[...Array(100).keys()].map(num => (
+              {[...Array(99).keys()].map(num => (
                 <option key={num} value={num + 1}>
                   {num + 1}
                 </option>

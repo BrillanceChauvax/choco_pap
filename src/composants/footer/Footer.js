@@ -1,4 +1,5 @@
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -15,9 +16,15 @@ function Footer() {
                 <p>Horaires: 9h00-17h00 du Lundi au Vendredi</p>
             </div>
             <div className="footer-section social">
-                <a href="www.facebook.com" target='_blank'><img src="../img/facebook.svg" title="Facebook" alt="Facebook"/></a>
-                <a href="www.instagram.com" target='_blank'><img src="../img/instagram.svg" title="Instagram" alt="Instagram"/></a>
-                <a href="www.twitter.com" target='_blank'><img src="../img/x-twitter.svg" title="X" alt="Twitter"/></a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                    <img src="../img/facebook.svg" title="Facebook" alt="Facebook" />
+                </a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                    <img src="../img/instagram.svg" title="Instagram" alt="Instagram" />
+                </a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                    <img src="../img/x-twitter.svg" title="X" alt="Twitter" />
+                </a>
             </div>
     </div> 
    </footer> 
