@@ -29,7 +29,7 @@ const FilterSidebar = ({ onFilterChange }) => {
       minRating,
       maxRating
     });
-  }, [selectedCategories, minPrice, maxPrice, minRating, maxRating]);
+  });
 
   return (
     <aside className="filter-sidebar">

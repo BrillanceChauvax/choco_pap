@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "title": "Cerisier",
     "price": 2.99,
     "note": 5,
@@ -18,7 +18,7 @@
     "ingredients": "Cerise enrobée de pâtes d'amandes, de chocolat au lait et d'éclat de noisettes. Allergènes : SOJA, LAIT (LACTOSE). Contient de l'anhydride sulfureux"
   },
   {
-    "id": "2",
+    "id": 2,
     "title": "Coulis Caramel",
     "price": 13.99,
     "note": 3,
@@ -36,7 +36,7 @@
     "ingredients": "Coulis de caramel enrobé de chocolat au lait. Allergènes : SOJA, LAIT (LACTOSE). Contient de l'anhydride sulfureux"
   },
   {
-    "id": "3",
+    "id": 3,
     "title": "Douceur exotique",
     "price": 4.99,
     "note": 4,
@@ -54,7 +54,7 @@
     "ingredients": "Liqueur aromatisée à la cerise enrobée de chocolat au lait. Allergènes : SOJA, LAIT (LACTOSE). Contient de l'anhydride sulfureux"
   },
   {
-    "id": "4",
+    "id": 4,
     "title": "Blanc Passion",
     "price": 5.99,
     "note": 5,
@@ -72,7 +72,7 @@
     "ingredients": "Pâte à la noix de coco enrobée de chocolat blanc. Allergènes : SOJA, LAIT (LACTOSE). Contient de l'anhydride sulfureux"
   },
   {
-    "id": "5",
+    "id": 5,
     "title": "Douceur croquante",
     "price": 2.99,
     "note": 3,
@@ -90,7 +90,7 @@
     "ingredients": "Noisette enrobée de chocolat au lait. Allergènes : SOJA, LAIT (LACTOSE). Contient de l'anhydride sulfureux"
   },
   {
-    "id": "6",
+    "id": 6,
     "title": "Le Zèbre",
     "price": 19.99,
     "note": 4,
@@ -108,7 +108,7 @@
     "ingredients": "Mixe de chocolat blanc et de chocolat au lait. Allergènes : SOJA, LAIT (LACTOSE). Contient de l'anhydride sulfureux"
   },
   {
-    "id": "7",
+    "id": 7,
     "title": "Coulis Fraise",
     "price": 9.99,
     "note": 4,
@@ -126,7 +126,7 @@
     "ingredients": "Morceau de fraise à la liqueur entièrement enrobée de chocolat au lait et d'éclat de noisettes. Allergènes : SOJA, LAIT (LACTOSE). Contient de l'anhydride sulfureux"
   },
   {
-    "id": "8",
+    "id": 8,
     "title": "Noir Passion",
     "price": 4.99,
     "note": 5,
@@ -144,7 +144,7 @@
     "ingredients": "Chocolat noir au coeur fondant. Allergènes : SOJA, LAIT (LACTOSE). Contient de l'anhydride sulfureux"
   },
   {
-    "id": "9",
+    "id": 9,
     "title": "Fantaisie",
     "price": 2.99,
     "note": 5,
@@ -162,7 +162,7 @@
     "ingredients": "Noix enrobée de chocolat au lait et parcemée de billes de sucre colorées. Allergènes : SOJA, LAIT (LACTOSE). Contient de l'anhydride sulfureux"
   },
   {
-    "id": "10",
+    "id": 10,
     "title": "Caramel Salé",
     "price": 14.99,
     "note": 4,

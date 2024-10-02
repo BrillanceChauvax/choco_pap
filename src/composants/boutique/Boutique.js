@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import productsData from './products.json'; // Assurez-vous de mettre le bon chemin vers votre fichier JSON
-import FilterSidebar from './Filtre.js'; // Assurez-vous d'importer votre composant de filtre
+import React, { useState, useContext } from 'react'; 
+import { Link } from 'react-router-dom';
+import productsData from './products.json'; 
+import { CartContext } from './CartContext.js';
+import FilterSidebar from './Filtre.js'; 
 import './Boutique.css';
 
 const Boutique = () => {
   const [filteredProducts, setFilteredProducts] = useState(productsData);
+  const { onAddToCart } = useContext(CartContext); // Récupérer onAddToCart depuis le contexte
 
   const handleFilterChange = (filters) => {
     const { selectedCategories, minPrice, maxPrice, minRating, maxRating } = filters;
@@ -38,26 +41,41 @@ const Boutique = () => {
     setFilteredProducts(filtered);
   };
 
+  const handleAddToCart = (product) => {
+    // Par défaut, ajouter 1 au panier
+    onAddToCart(product, 1);
+    console.log(`${product.title} ajouté au panier !`);
+  };
+
   return (
     <div className="boutique-container">
       <FilterSidebar onFilterChange={handleFilterChange} />
-      <div><p className="shop-name">BOUTIQUE</p>
-      <div className="products-grid">
-        {filteredProducts.length === 0 ? (
-          <p className="no-product">Aucun produit trouvé !</p> // Message d'absence de produit
-        ) : (
-          filteredProducts.map(product => (
-            <div key={product.id} className="product-card">
-              <img src={product.image} alt={product.title} className="product-image" />
-              <h4>{product.title}</h4>
-              <p className="product-price">{product.price} €</p>
-              <p className="product-note">Note : {product.note}</p>
-              <button className="add-to-cart">Ajouter au panier</button>
-            </div>
-          ))
-        )}
+      <div>
+        <p className="shop-name">BOUTIQUE</p>
+        <div className="products-grid">
+          {filteredProducts.length === 0 ? (
+            <p className="no-product">Aucun produit trouvé !</p> 
+          ) : (
+            filteredProducts.map(product => (
+              <div key={product.id} className="product-card">
+                <Link to={`/product/${product.id}`} className="product-card-link">
+                  <img src={product.image} alt={product.title} className="product-image" />
+                  <h4>{product.title}</h4>
+                  <p className="product-price">{product.price} €</p>
+                  <p className="product-note">Note : {product.note}</p>
+                </Link>
+                <button
+                  className="add-to-cart"
+                  onClick={() => handleAddToCart(product)} // Passer le produit à handleAddToCart
+                >
+                  Ajouter au panier
+                </button>
+              </div>
+            ))
+          )}
+        </div>
       </div>
-    </div></div>
+    </div>
   );
 };
 
