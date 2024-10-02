@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Projet front-end Choco Pap
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Réalisation du site avec le framework React.
 
-## Available Scripts
+Le front-end est intégralement concu jusqu'au bouton de validation du panier (qui est inactif).
 
-In the project directory, you can run:
+#PRÉSENTATION DU CONTEXTE DU CAHIER DES CHARGES
 
-### `npm start`
+# 1. Présentation de l’entreprise à l’origine du besoin
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Choco-Pap est une entreprise de vente de chocolats qui possède plusieurs boutiques en France. L’entreprise souhaite évoluer et proposer à ces clients la possibilité de commander leurs produits en ligne.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 2. Contexte
 
-### `npm test`
+Vous êtes actuellement développeur junior dans une agence web. Le chef de projet vous a proposé de collaborer sur un nouveau projet.
+On vous a chargé de travailler sur la partie frontend du site.
+La charte graphique, les wireframes et les images vous ont été fourni.
+Le client a demandé à avoir un site responsive.
+Vous travaillerez sur la partie frontend de ce site en collaboration avec d’autres développeurs.
+Votre mission sera d’intégrer les wireframes qui vous ont été fourni ainsi que leurs fonctionnalités en accord avec le cahier des charges.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 3. Expression de la demande – réalisation attendue de l’apprenant
 
-### `npm run build`
+Le site devra:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- respecter le plus fidèlement possible les wireframes et la charte graphique ;
+- être correctement optimisé et référencé ;
+- avoir un code qui respecte les bonnes pratiques ;
+- être accessible sur tous les navigateurs ;
+- être valide W3C ;
+- contenir les fonctionnalités et animations demandées ;
+- être sécurisé.
+  Le site sera mis en ligne et son code devra être visible sur Github avec un minimum 10 commits.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Important: Les éléments ajoutés au panier doivent rester présents même en cas de rechargement de la page.

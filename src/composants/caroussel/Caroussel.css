@@ -5,7 +5,6 @@
     margin: 0 auto;
     overflow: hidden;
     font-family: Fjalla One;
-    overflow: hidden;
 }
 
 .carousel-slides {
@@ -17,6 +16,7 @@
 .slide {
     width: 100%; 
     flex: 0 0 100%; 
+    background-color: #FFD543;
 }
 
 .slide img {
@@ -88,16 +88,12 @@
     }
 
     .carousel-content h1 {
-        font-size: 60px; /* Garder la taille du texte identique sur mobile */
+        font-size: 50px; /* Garder la taille du texte identique sur mobile */
         margin: 0;
+        margin-bottom: 30px;
     }
 
     .carousel-btn {
         font-size: 18px; /* Taille du bouton inchangée sur mobile */
-    }
-
-    .slide {
-        margin: 0;
-        padding: 0;
     }
 }

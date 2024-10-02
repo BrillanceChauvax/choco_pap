@@ -107,11 +107,16 @@
     }
 
     .product-right h2,
-    .product-price,
+    .product-prices,
     .list-ingredient,
     .quantity-section {
-        text-align: left; /* Alignement des textes à gauche */
+        text-align: left;/* Alignement des textes à gauche */
         width: 100%; /* Prendre toute la largeur disponible */
+    }
+
+    .product-prices {
+      font-weight: bold;
+      font-size: 35px;
     }
 
     .product-description {

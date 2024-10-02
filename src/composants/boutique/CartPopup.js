@@ -10,20 +10,20 @@ const CartPopup = ({ isOpen, onClose }) => {
   return (
     <div className={`cart-popup ${isOpen ? 'open' : ''}`}>
       <div className="cart-header">
-        <h2>PANIER</h2>
-        <button className="close-button" onClick={onClose}>X</button>
+        <button className="close-button" onClick={onClose}>✖</button>
+        <h2 className="title-panier">PANIER</h2>
       </div>
 
       <div className="cart-items">
         {cartItems.length === 0 ? (
-          <p>Votre panier est vide.</p>
+          <p className="empty-cart">Votre panier est vide.</p>
         ) : (
           cartItems.map((item) => (
             <div key={item.id} className="cart-item">
               <button className="remove-item" onClick={() => onRemoveFromCart(item.id)}>✖</button>
               <img src={item.image} alt={item.title} className="item-image" />
               <div className="item-details">
-                <span className="item-title">{item.title}</span>
+                <span className="item-title">{item.title}</span><br></br>
                 <span className="item-price">{item.price} €</span>
                 <select className="quantity-select" value={item.quantity} onChange={(e) => onUpdateQuantity(item.id, e.target.value)}>
                   {[...Array(99).keys()].map(num => (
@@ -37,7 +37,7 @@ const CartPopup = ({ isOpen, onClose }) => {
       </div>
 
       <div className="cart-footer">
-        <h3>Total: {total} €</h3>
+        <h3 className="total-cart">Total: {total} €</h3>
         <button className="clear-cart" onClick={onClearCart}>RÉINITIALISER LE PANIER</button>
         <button className="validate-cart" disabled>VALIDER LE PANIER</button>
       </div>
