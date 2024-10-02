@@ -69,9 +69,13 @@
     border-radius: 5px; 
     background-color: #fff; 
   }
+
+  .product-card-link h4 {
+    text-decoration: none;
+  }
   
   .product-image {
-    width: 100%;  /* Image prend toute la largeur de la carte */
+    max-width: 100%;  /* Image prend toute la largeur de la carte */
     height: 200px; /* Hauteur fixe pour uniformité */
     object-fit: contain; /* S'assure que l'image s'adapte bien sans déformation */
   }

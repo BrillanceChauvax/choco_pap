@@ -25,11 +25,10 @@ const ProductPage = () => {
   };
 
   return (
+    <> 
     <div className="product-page">
       <div className="product-left">
-        <img src={product.image} alt={product.title} className="product-image" />
-        <h4>Ingrédients :</h4>
-        <p className="product-ingredients">{product.ingredients}</p>
+        <img src={product.image} alt={product.title} className="product-image-page" />
       </div>
 
       <div className="product-right">
@@ -38,7 +37,6 @@ const ProductPage = () => {
         <p className="product-description">{product.description}</p>
 
         <div className="quantity-section">
-          <label htmlFor="quantity">Quantité :</label>
           <select id="quantity" value={quantity} onChange={handleQuantityChange}>
             {[...Array(10).keys()].map(num => (
               <option key={num} value={num + 1}>
@@ -52,6 +50,11 @@ const ProductPage = () => {
         </div>
       </div>
     </div>
+    <div className="list-ingredient">
+        <h4 className="title-ingredient">Ingrédients</h4>
+        <p className="product-ingredients">{product.ingredients}</p>
+    </div>
+    </>
   );
 };
 
