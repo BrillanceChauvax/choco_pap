@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import './Navbar.css';
 import cartImage from '../img/cart.svg';
 import logo from '../img/logo.png';
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({ onCartClick }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -34,16 +35,16 @@ const Navbar = () => {
     <header>
       <nav className="navbar">
         <div className="navbar-logo">
-            <img src={logo} alt="Logo Choco Pap" title="Choco Pap"/>
+          <img src={logo} alt="Logo Choco Pap" title="Choco Pap" />
         </div>
 
         {!isMobile && (
           <ul className="navbar-links">
-            <li><a href="/">Accueil</a></li>
-            <li><a href="/Boutique">Boutique</a></li>
-            <li><a href="/Panier">
+            <li><Link to="/">Accueil</Link></li>
+            <li><Link to="/boutique">Boutique</Link></li>
+            <li><button onClick={onCartClick} className="cart-icon">
               <img src={cartImage} alt="Panier" className="cart-image" />
-            </a></li>
+            </button></li>
           </ul>
         )}
 
@@ -60,11 +61,13 @@ const Navbar = () => {
         <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
           <ul>
             <li><a href="/">Accueil</a></li>
-            <li><a href="/Boutique">Boutique</a></li>
-            <li><a href="/Panier" className="cart-icon">Panier
-              <img src={cartImage} alt="Panier" className="cart-image" />
-              
-            </a></li>
+            <li><a href="/boutique">Boutique</a></li>
+            <li>
+              <button onClick={onCartClick} className="cart-icon">
+                Panier
+                <img src={cartImage} alt="Panier" className="cart-image" />
+              </button>
+            </li>
           </ul>
         </div>
       )}

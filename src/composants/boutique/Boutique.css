@@ -134,6 +134,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+.product-price{
+  text-align: center;
+}
+
   }
 
   

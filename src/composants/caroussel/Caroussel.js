@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Caroussel.css';
+import { Link } from 'react-router-dom';
 
 const Carousel = () => {
     // State pour l'index de l'image actuelle
@@ -36,7 +37,7 @@ const Carousel = () => {
             </div>
             <div className="carousel-content">
                 <h1>CHOCO PAP</h1>
-                <a href="/Boutique" className="carousel-btn">VOIR LA BOUTIQUE</a>
+                <Link to="/Boutique" className="carousel-btn">VOIR LA BOUTIQUE</Link>
             </div>
             <div className="carousel-indicators">
                 {slides.map((_, index) => (

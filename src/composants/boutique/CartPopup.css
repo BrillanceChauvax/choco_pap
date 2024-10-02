@@ -1,0 +1,118 @@
+/* CartPopup.css */
+.cart-popup {
+    position: fixed;
+    top: 135px;
+    right: -600px; /* Cache le pop-up par défaut */
+    width: 500px;
+    height: calc(100% - 235px); /* S'arrête avant la navbar et le footer */
+    background-color: white;
+    border: solid 2px;
+    transition: right 0.5s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cart-popup.open {
+    right: 0; /* Fait apparaître le pop-up */
+  }
+  
+  .cart-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centre le contenu horizontalement */
+    position: relative; /* Positionner l'élément relativement pour placer la croix */
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .close-button {
+    position: absolute; /* Positionne la croix par rapport à l'en-tête */
+    left: 10px; /* Positionne la croix à gauche */
+    border: 1px solid #ccc; /* Ajout d'une bordure */
+    background: none; /* Supprime l'arrière-plan */
+    cursor: pointer; /* Changement de curseur pour indiquer que c'est cliquable */
+  }
+  
+  .cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .remove-item {
+    color: red;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .item-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .item-details {
+    flex: 1;
+  }
+  
+  .quantity-select {
+    margin-top: 5px;
+  }
+  
+  .cart-footer {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .clear-cart,
+  .validate-cart {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .cart-popup {
+      width: 100%; /* Prend toute la largeur de l'écran */
+      height: calc(100vh - 135px); /* Ajuste la hauteur pour ne pas empiéter sur la navbar et le footer */
+      padding: 16px; /* Ajoute un padding pour le confort */
+    }
+  
+    .cart-items {
+      overflow-y: auto; /* Ajoute un scroll si le contenu dépasse */
+    }
+  
+    .cart-header {
+      justify-content: center; /* Centre le titre par rapport à la croix */
+    }
+  
+    .cart-footer {
+      text-align: center; /* Centre le contenu du pied de page */
+    }
+  
+    .cart-item {
+      flex-direction: row; /* Assure que les items sont alignés horizontalement */
+      align-items: center; /* Centre verticalement le contenu */
+    }
+  
+    .item-image {
+      width: 50px; /* Ajuste la taille de l'image pour qu'elle soit visible sans prendre trop de place */
+    }
+  
+    .remove-item {
+      margin-right: 10px; /* Espace entre la croix et l'image */
+    }
+  }
+  
